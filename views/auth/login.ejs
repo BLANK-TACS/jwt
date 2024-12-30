@@ -1,0 +1,28 @@
+<form action="/auth/login" method="post">
+    <h2>Login</h2>
+    <div>
+        <label for="username">Username</label>
+        <p class="error"></p>
+        <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username" />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <p class="error"></p>
+        <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password" />
+    </div>
+    <button type="submit">Submit</button>
+    <div>
+        <span>
+            Dont have an account?
+            <a href="/auth/signup">Create account</a>
+        </span>
+    </div>
+</form>

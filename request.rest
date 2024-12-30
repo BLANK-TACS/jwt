@@ -1,0 +1,15 @@
+GET http://localhost:3000
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "tacs",
+    "password": "qwerty"
+}
+
+
+###
+GET http://localhost:3000/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRhY3MiLCJwYXNzd29yZCI6InF3ZXJ0eSIsImlhdCI6MTczNTM5NDk5M30.fkgMTYiQsjb4aV2m0tGoXrqi9Qyxo65Fqw5vvgv_sjY

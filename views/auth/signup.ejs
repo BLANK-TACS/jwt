@@ -1,0 +1,46 @@
+<form action="/auth/signup" method="post">
+    <h2>Signup</h2>
+    <div>
+        <label for="username">Username</label>
+        <p class="error">
+            <%= locals.error?.path?.[0] == 'username' ? locals.error.message :
+            ''%>
+        </p>
+        <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            value="<%= locals.data?.username%>" />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <p class="error">
+            <%= locals.error?.path?.[0] == 'password' ? locals.error.message :
+            ''%>
+        </p>
+        <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            value="<%= locals.data?.password%>" />
+    </div>
+    <div>
+        <label for="confirm-password">Confirm Password</label>
+        <p class="error">
+            <%= locals.error?.path?.[0] == 'confirmPass' ? locals.error.message
+            : ''%>
+        </p>
+        <input
+            type="password"
+            name="confirmPass"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            value="<%= locals.data?.confirmPass%>" />
+    </div>
+    <button type="submit">Submit</button>
+    <div>
+        <span>Already has an account? <a href="/auth/login">Login</a></span>
+    </div>
+</form>
